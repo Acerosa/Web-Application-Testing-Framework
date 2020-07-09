@@ -14,7 +14,7 @@ public class BaseTest {
 
     @BeforeClass
     public static void setUp(){
-        twebdriver = factoryBrowser.launchingBrowser("chrome");
+        twebdriver = FactoryBrowser.launchingBrowser("chrome");
         twebdriver.get("http:localhost:9292/");
         twebdriver.manage().window().maximize();
     }

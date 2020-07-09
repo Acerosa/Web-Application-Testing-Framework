@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import com.sparta.rr.Base.BaseTest;
 import com.sparta.rr.POMs.POMFillForm;
+import com.sparta.rr.POMs.POMSGRegistrationForm;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
@@ -16,6 +17,7 @@ public class AppTest extends BaseTest {
      */
 
     POMFillForm pomFillForm = new POMFillForm(twebdriver);
+    POMSGRegistrationForm registrationForm = new POMSGRegistrationForm(twebdriver);
     @Test
     public void shouldAnswerWithTrue()
     {
@@ -26,5 +28,9 @@ public class AppTest extends BaseTest {
 
     }
 
+    @Test
+    public void testIfErrorTextDisplays(){
+        registrationForm.isEmptyElement();
+    }
 
 }

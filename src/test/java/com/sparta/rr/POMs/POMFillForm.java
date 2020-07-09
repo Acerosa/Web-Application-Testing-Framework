@@ -18,33 +18,32 @@ public class POMFillForm extends PageBase {
         super(driver);
     }
 
-
-    By firstName = By.id("firstName");
-    By lastName = By.id("lastName");
-    By age= By.xpath ("/html/body/div/form/div[3]/div/input");
-    By dob = By.name ("dob");
-    By male = By.xpath ("/html/body/div/form/div[5]/label");
-    By female = By.xpath("/html/body/div/form/div[6]/label");
-    By degree = By.xpath("/html/body/div/form/div[7]/div/input");
-    WebElement uni = webDriver.findElement(By.id("inputUni"));
-    Select uniSelection = new Select(uni);
-    By address = By.id("inputAddress");
-    By address2 = By.id("inputAddress2");
-    By city = By.id("inputCity");
-    WebElement county = webDriver.findElement(By.id("inputCounty"));
-    Select countySelect = new Select(county);
-    By postcode = By.id("inputPostcode");
-    By email = By.id("inputemailaddress");
-    By skills = By.id("exampleFormControlTextarea1");
-    By phone = By.id("exampleFormControlInput1");
-    By linkedin = By.xpath("/html/body/div/form/div[17]/div/input");
-    By streamSDET = By.xpath("/html/body/div/form/div[20]/div[1]/label");
-    By DevOps = By.xpath("/html/body/div/form/div[20]/div[2]/label");
-    By terms = By.id("terms");
-    WebElement slider = webDriver.findElement(By.id("experienceSlider"));
-    Actions slideAction = new Actions(webDriver);
-    By submit = By.xpath("/html/body/div/form/button");
-
+   public By firstName = By.id("firstName");
+   public By lastName = By.id("lastName");
+   public By age= By.xpath ("/html/body/div/form/div[3]/div/input");
+   public By dob = By.name ("dob");
+   public By male = By.xpath ("/html/body/div/form/div[5]/label");
+   public By female = By.xpath("/html/body/div/form/div[6]/label");
+   public By degree = By.xpath("/html/body/div/form/div[7]/div/input");
+   public WebElement uni = webDriver.findElement(By.id("inputUni"));
+   public Select uniSelection = new Select(uni);
+   public By address = By.id("inputAddress");
+   public By address2 = By.id("inputAddress2");
+   public By city = By.id("inputCity");
+   public WebElement county = webDriver.findElement(By.id("inputCounty"));
+   public Select countySelect = new Select(county);
+   public By postcode = By.id("inputPostcode");
+   public By email = By.id("inputemailaddress");
+   public By skills = By.id("exampleFormControlTextarea1");
+   public By phone = By.id("exampleFormControlInput1");
+   public By linkedin = By.xpath("/html/body/div/form/div[17]/div/input");
+   public By streamSDET = By.xpath("/html/body/div/form/div[20]/div[1]/label");
+   public By DevOps = By.xpath("/html/body/div/form/div[20]/div[2]/label");
+   public By terms = By.id("terms");
+   public WebElement slider = webDriver.findElement(By.id("experienceSlider"));
+   public Actions slideAction = new Actions(webDriver);
+   public By submit = By.xpath("/html/body/div/form/button");
+   public By noFirsNameText = By.xpath("/html/body/div/form/div[1]/div/div");
     public void fillForm(){
         writeThis(firstName, "Ricardo");
         writeThis(lastName, "Rosa");
