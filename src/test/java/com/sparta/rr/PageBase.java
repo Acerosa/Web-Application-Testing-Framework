@@ -2,10 +2,12 @@ package com.sparta.rr;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class PageBase {
 
     WebDriver webDriver;
+    WebElement webElement;
 
     public PageBase  (WebDriver driver){
         this.webDriver = driver;
@@ -27,4 +29,11 @@ public class PageBase {
     private boolean isThisDisplaying(By element){
         return webDriver.findElement(element).isDisplayed();
     }
+
+    public boolean isEmpty(String id, String attribute){
+        webElement = webDriver.findElement(By.id(id));
+       return webElement.getAttribute(attribute).isEmpty();
+    }
+
+
 }
