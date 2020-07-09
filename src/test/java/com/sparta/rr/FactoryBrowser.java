@@ -7,12 +7,13 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class FactoryBrowser {
 
-    WebDriver webDriver;
+   public static WebDriver webDriver;
+   public static String browser;
 
-    public WebDriver launchingBrowser(String browser) {
-
+    public static WebDriver launchingBrowser(String lbrowser) {
+        browser = lbrowser;
         switch (browser) {
-            case "firefox":
+            case  "firefox":
                 webDriver = new FirefoxDriver();
                 break;
             case "chrome":

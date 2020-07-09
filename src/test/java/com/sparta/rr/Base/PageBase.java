@@ -1,4 +1,4 @@
-package com.sparta.rr;
+package com.sparta.rr.Base;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class PageBase {
 
-    WebDriver webDriver;
+    public WebDriver webDriver;
     WebElement webElement;
 
     public PageBase  (WebDriver driver){
@@ -21,6 +21,9 @@ public class PageBase {
         webDriver.findElement(element).sendKeys(text);
     }
 
+    public void writeThisElement(By element, String text){
+        webDriver.findElement(element).sendKeys(text);
+    }
     public String readThis(By element){
        return webDriver.findElement(element).getText();
 
@@ -34,6 +37,4 @@ public class PageBase {
         webElement = webDriver.findElement(By.id(id));
        return webElement.getAttribute(attribute).isEmpty();
     }
-
-
 }

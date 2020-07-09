@@ -1,8 +1,9 @@
-package com.sparta.rr;
+package com.sparta.rr.POMs;
 
+import com.sparta.rr.Base.PageBase;
 import org.openqa.selenium.WebDriver;
 
-public class POMSGRegistrationForm extends PageBase{
+public class POMSGRegistrationForm extends PageBase {
 
 
     public POMSGRegistrationForm(WebDriver driver) {
