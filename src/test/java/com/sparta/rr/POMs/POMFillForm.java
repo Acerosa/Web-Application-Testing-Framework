@@ -44,6 +44,14 @@ public class POMFillForm extends PageBase {
    public Actions slideAction = new Actions(webDriver);
    public By submit = By.xpath("/html/body/div/form/button");
    public By noFirsNameText = By.xpath("/html/body/div/form/div[1]/div/div");
+
+    public void treadThis() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
     public void fillForm(){
         writeThis(firstName, "Ricardo");
         writeThis(lastName, "Rosa");
@@ -65,6 +73,7 @@ public class POMFillForm extends PageBase {
         click(terms);
         slideAction.moveByOffset(200,0);
         slideAction.release().build();
+            treadThis();
         click(submit);
     }
 }

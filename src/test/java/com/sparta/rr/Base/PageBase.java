@@ -35,9 +35,14 @@ public class PageBase {
         return webDriver.findElement(element).isDisplayed();
     }
 
-    public boolean isEmpty(String id){
+    public boolean isEmptyById(String id){
         webElement = webDriver.findElement(By.id(id));
        return webElement.getAttribute("value").isEmpty();
+    }
+
+    public boolean isEmptyByXpath(String xpath){
+        webElement = webDriver.findElement(By.xpath(xpath));
+        return webElement.getAttribute("value").isEmpty();
     }
 
 }
