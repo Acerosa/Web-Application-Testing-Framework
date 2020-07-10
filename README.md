@@ -11,7 +11,7 @@ JUnit and Selenium knowledge to make use of assertions.
 ```
  assertEquals("https://IexpectThisURL", pomFillForm.webDriver.getCurrentUrl());
 ```
-The application runs best on intellij Idea Version 2019.3 2019.3.5 and higher,
+The application runs best on intellij Idea Version 2019.3.5 and higher,
 selenium version 3.141.59, junit-jupiter-api, version 5.6.2 Java 13.
 
 ## Built With
